@@ -3,10 +3,15 @@
 <body>
 <?php
 
-filename = notes/testing123.txt;
+filename = "notes/testing123.txt";
 
 $f = fopen(filename, "r");
-echo fgets($f);
+
+
+while(!feof($f)) { 
+    echo fgets($f) . "<br />";
+}
+
 fclose($f);
 
 ?>
